@@ -6,13 +6,31 @@
  * Time: PM 14:54
  */
 
-class Config
+class ConfigDB
 {
     private static $dsn = "mysql:host=localhost;dbname=helium";
 
     private static $username = "root";
 
     private static $password = "";
+
+    private static $encoding = "SET NAMES utf8";
+
+    /**
+     * @return string
+     */
+    public static function getEncoding()
+    {
+        return self::$encoding;
+    }
+
+    /**
+     * @param string $encoding
+     */
+    public static function setEncoding($encoding)
+    {
+        self::$encoding = $encoding;
+    }
 
     /**
      * @return string

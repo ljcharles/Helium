@@ -2,7 +2,11 @@
   <dictionary name="fresh">
     <words>
       <w>dbname</w>
+      <w>freshloic</w>
+      <w>jumbotron</w>
       <w>loïc</w>
+      <w>navbar</w>
+      <w>toggler</w>
     </words>
   </dictionary>
 </component>
