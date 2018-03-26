@@ -15,16 +15,18 @@
 //
 //$result = $statement->fetchColumn();
 
+require "configDB.php";
+
 class ConnectionDB
 {
-    protected static $instance;
+    private $instance;
 
     /**
      * Connection constructor.
      */
-    private function __construct() {
+     function __construct() {
         try {
-            self::$instance = new PDO(
+            $this->instance = new PDO(
                 ConfigDB::getDsn(),
                 ConfigDB::getUsername(),
                 ConfigDB::getPassword(),
@@ -38,16 +40,13 @@ class ConnectionDB
         }
     }
 
-    /**
-     * @return PDO
-     */
-    public static function getInstance() {
-        if (!self::$instance) {
+    public function getInstance() {
+        if (!$this->instance) {
             $object = __CLASS__;
-            self::$instance = new $object;
+            return $this->instance = new $object;
         }
 
-        return self::$instance;
+        return $this->instance;
     }
 
 }
