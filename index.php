@@ -20,8 +20,8 @@
                     }
                 });
             }
-            $(document).ready(function () {
-                $("#boutonValider").click(function () {
+            $(function () {
+                $("#boutonValider").on("click", function () {
                     var monTexte = $("#monTexte").val();
 
                     if( monTexte !== ""){

@@ -1,0 +1,55 @@
+Question 1 ?	Question 2 ?
+ 	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr at accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt."
+Question 3 ?	Question 4 ?
+"Lorem ipsum dolor sit amet, consetetur sadipscing elitr at accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt."	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr at accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt."
+
+ [gnrow]
+
+ [gncolumn size="1/2"]
+ Pour toute question commerciale
+
+ Envie d’en savoir plus sur nos solutions, modifier votre contrat, souscrire de nouvelles garanties…
+
+ [picto mail] production[at]assuranceslacour.com
+
+ [/gncolumn]
+
+ [gncolumn size="1/2"]
+ Pour le suivi de vos sinistres
+
+ Vous pouvez contacter votre agence par téléphone, ou nous écrire sur
+
+ [picto mail] sinistres[at]assuranceslacour.com .
+
+ [/gncolumn]
+
+ [/gnrow]
+
+ div.su-spoiler:nth-child(2) > div:nth-child(2) > p:nth-child(2)
+
+
+ $prenom_text        = "Jhon";
+ $tel_text           = "0690 168 218";
+ $deja_client_text   = "Oui";
+ $marque_text        = "XXX";
+ $d1c_text           = "XXX";
+ $modele_text        = "XXX";
+ $cu_text            = "XXX";
+ $ddn_text           = "XXX";
+ $d_permis_text      = "XXX";
+ $date_debut_text    = new \DateTime();
+
+ <div class="pricingrow">
+ <div class="pricing" style="width: 100%;">
+ <h4 class="plan2" style="text-align: center; margin-top: -50px; background-color: #005eb8; border-top-right-radius: 10px; border-top-left-radius: 10px;">Nos assurances</h4>
+ <p style="text-align: left;"><span style="background-color: #ffffff; color: #005eb8;"><strong><img style="display: block; margin-left: auto; margin-right: auto;" src="images/qui-somme-nous.png" alt="" width="460" height="328" /></strong></span></p>
+ <p style="text-align: center;"><span style="color: #000000;"><strong>Auto, Maison, Santé…</strong></span></p>
+ <div class="order" style="text-align: center;"><a class="blue_to_red_lacour readmore" style="text-align: center; border-radius: 10px;" href="#">En savoir plus</a></div>
+ </div>
+ </div>
+ <p> </p>
+
+
+unzip helixultimate_quickstart_j3.zip -d /var/www/html/DataCenter
+sudo chown -R www-data:www-data /var/www/html/DataCenter
+sudo chmod -R 775 /var/www/html/DataCenter
