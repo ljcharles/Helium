@@ -1325,12 +1325,22 @@ video#bgvid {
 }
 
 .mp_left .cell_pad .mnu_topmenu > li:before{
-    content: "\f138" !important;
+    content: "\f055" !important;
     font-size: 15px !important;
 }
 
 .container_sidemenu ul li:before {
-    content: "\f138" !important;
+    content: "\f055" !important;
+    font-size: 15px !important;
+}
+
+.container_sidemenu ul li.parent:before {
+    content: "\f055" !important;
+    font-size: 15px !important;
+}
+
+.container_sidemenu ul li.parent.active:before, .container_sidemenu ul li.active:before {
+    content: "\f056" !important;
     font-size: 15px !important;
 }
 
@@ -1345,6 +1355,7 @@ video#bgvid {
 
 .container_sidemenu a {
     color: #005cbf !important;
+    text-decoration: none;
 }
 
 .container_sidemenu .active > a, .container_sidemenu .active > span, .container_sidemenu .active:before {
