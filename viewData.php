@@ -7,13 +7,18 @@
  */
 
 require "Core\Class\ConnectionDB.php";
-$conn = new ConnectionDB();
 
-$query = "SELECT texte FROM description ORDER BY id DESC LIMIT 1";
+class viewData{
+    function getTexte(){
+        $conn = new ConnectionDB();
 
-$conn = $conn->getInstance();
-$statement = $conn->query($query);
+        $query = "SELECT texte FROM description ORDER BY id DESC LIMIT 1";
 
-$texte = $statement->fetch();
+        $conn = $conn->getInstance();
+        $statement = $conn->query($query);
 
-echo $texte['texte'];
+        $texte = $statement->fetch();
+
+        return $texte['texte'];
+    }
+}

@@ -11,7 +11,9 @@
 body {
     margin:0;
     padding:0;
-
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .clr {
@@ -365,6 +367,24 @@ i {
     content: "\f05a";
 }
 
+.error_404 {
+    position: relative;
+    height: 500px;
+    background: linear-gradient(-225deg,rgba(30,30,30,.7) 10%,rgba(46,46,46,.1) 2%), url("../images/carousel/Assurance-habitation-Lacour-HD-3.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contentrow{
+    margin: 0 !important;
+}
+
 .error {
     color:#900;
     border: 1px solid #900;
@@ -586,6 +606,35 @@ ul.mnu_topmenu {
     padding-top: 20px !important;
 }
 
+.formules{
+    height: auto;
+    background: linear-gradient(-225deg, rgba(0, 91, 178, .7) 30%, rgba(188, 58, 63, .9) 8%) center;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+.blog .item-image img{
+    height: 300px !important;
+}
+
+.blog-featured .item-image img:first-of-type{
+    height: 300px !important;
+    width: 100% !important;
+}
+
+.startup_intro_container .alert-info{
+    background-color: #fafafa !important;
+    border-color: #fafafa !important;
+}
+
 .fix_menu {
     background: #FFF !important;
     padding:15px 0;
@@ -596,7 +645,7 @@ ul.mnu_topmenu {
     transition: all 0s;
 }
 
-.fix_menu .mnu_topmenu > li.active > a, .fix_menu .mnu_topmenu > li.active > span {
+.fix_menu .mnu_topmenu > li.active > span {
     color: #005EB8 !important;
     transition: all 0s;
     border-bottom: 2px solid #005EB8;
@@ -624,6 +673,7 @@ ul.mnu_topmenu {
     color: #fff;
     text-align: center;
     padding: 15px 0;
+    margin-bottom: 40px !important;
 }
 
 .breadcrumbsrow h1 {
@@ -795,11 +845,11 @@ ul.mnu_topmenu {
 /*}*/
 
 .mp_advert1 h3:before {
-    content: "\f015";
+    content: "\f1b9";
 }
 
 .mp_advert2 h3:before {
-    content: "\f1b9";
+    content: "\f015";
 }
 
 .mp_advert3 h3:before {
@@ -818,6 +868,35 @@ ul.mnu_topmenu {
 .advertrow .moduletable:hover h3 {
     background: url(../images/custom/h3_bg_hover.png) no-repeat bottom right;
     color: #CB333B;
+}
+
+.blog-featured {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.nav-collapse.opened li a{
+    color: #333 !important;
+}
+
+.nav-collapse.opened ul li ul li a{
+    color: #fff !important;
+}
+
+.nav-collapse.opened li a:hover{
+    color: #fff !important;
+}
+
+.blog{
+    padding-bottom: 60px;
+}
+
+.nav-collapse.opened li.active, .nav-collapse.opened li:hover {
+    background: #005EB8;
+}
+
+.nav-collapse.opened > ul ul {
+    background: #CB333B;
 }
 
 /* travelrow */
@@ -1325,28 +1404,40 @@ video#bgvid {
 }
 
 .mp_left .cell_pad .mnu_topmenu > li:before{
-    content: "\f055" !important;
+    content: "\f138" !important;
     font-size: 15px !important;
 }
 
 .container_sidemenu ul li:before {
-    content: "\f055" !important;
+    content: "\f138" !important;
     font-size: 15px !important;
 }
 
 .container_sidemenu ul li.parent:before {
-    content: "\f055" !important;
+    content: "\f138" !important;
     font-size: 15px !important;
 }
 
 .container_sidemenu ul li.parent.active:before, .container_sidemenu ul li.active:before {
-    content: "\f056" !important;
+    content: "\f13a" !important;
     font-size: 15px !important;
 }
 
-.container_sidemenu {
+.container_sidemenu  {
     text-transform: uppercase;
     color: #005cbf !important;
+    border-radius: 5px;
+    background: rgba(0,0,0,.06);
+    font-weight: lighter !important;
+    padding-left: 80px;
+    margin-left: -80px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    z-index: 3;
+    -webkit-animation: translationOnX 1s;
+    animation: translationOnX 1s;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
 }
 
 .container_sidemenu ul{
@@ -1409,12 +1500,12 @@ video#bgvid {
 }
 
 .contentrow .moduletable li {
-    padding: 10px 0;
+    padding: 2px 0;
 }
 
 .contentrow .moduletable .menu {
     list-style: none;
-    margin: 0 15px;
+    margin: 0px -50px;
 }
 
 .contentrow .moduletable .menu li:before {
@@ -1422,7 +1513,7 @@ video#bgvid {
     content: "\f111";
     font-size: 10px;
     float: left;
-    padding-top: 4px;
+    padding-top: 2px;
     padding-right: 10px;
 }
 
@@ -1605,6 +1696,42 @@ input.rapid_contact.button:hover {
     z-index: 3;
     -webkit-animation: translationOnZ 1.3s;
     animation: translationOnZ 1.3s;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+@-webkit-keyframes translationOnX {
+    from {
+        -webkit-transform: perspective(70px) translateY(-120px);
+        transform: perspective(70px) translateY(-120px);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: perspective(70px) translateY(0);
+        transform: perspective(70px) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes translationOnX {
+    from {
+        -webkit-transform: perspective(70px) translateX(-120px);
+        transform: perspective(70px) translateX(-120px);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: perspective(70px) translateX(0);
+        transform: perspective(70px) translateX(0);
+        opacity: 1;
+    }
+}
+
+.translationSurX{
+    z-index: 3;
+    -webkit-animation: translationOnX 1.3s;
+    animation: translationOnX 1.3s;
     -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
 }
@@ -1829,6 +1956,10 @@ input.rapid_contact.button:hover {
 
 @media (max-width: 700px) {
 
+    .fix_menu .mnu_topmenu > li.active > a{
+        color: #fff !important;
+    }
+
     .hot_swipe_carousel_slides1 .contents {
         top: 30px;
         text-align: center;
@@ -1871,6 +2002,10 @@ input.rapid_contact.button:hover {
 
 @media (max-width: 570px) {
 
+    .sparky_logo_image img {
+        height: 48px !important;
+    }
+
     .hot_swipe_carousel_slides1 .contents {
         top: 20px;
     }
@@ -1893,11 +2028,24 @@ input.rapid_contact.button:hover {
         font-size: 12px;
     }
 
+    a.buynow{
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
     .row-fluid .span6 {
         width: 100%;
         margin-bottom: 45px;
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .mp_bottom2, .mp_bottom3, .mp_bottom1  {
+        width: 100% !important;
+    }
+
+    .container_sidemenu ul{
+        margin: 0px -4px !important;
     }
 
     .teamrow .agents img {

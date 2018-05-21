@@ -10,34 +10,7 @@
         <link href="css/main.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <script src="js/jquery3.min.js"></script>
-        <script>
-            function viewData() {
-                $.ajax({
-                    type: "GET",
-                    url: "viewData.php",
-                    success: function (data) {
-                        $("#displayMyText").html(data);
-                    }
-                });
-            }
-            $(function () {
-                $("#boutonValider").on("click", function () {
-                    var monTexte = $("#monTexte").val();
-
-                    if( monTexte !== ""){
-                        var data = "monTexte=" + monTexte;
-                        $.ajax({
-                            type: "POST",
-                            url: "collectData.php",
-                            data: data,
-                            success: function () {
-                                viewData();
-                            }
-                        });
-                    }
-                });
-            });
-        </script>
+        <script src="js/main.js"></script>
     </head>
     <body>
         <main>
@@ -97,8 +70,13 @@
                         <div class="col-lg-6">
                             <div class="jumbotron text-center min-height-290 z-depth-2">
                                 <span class="center-text-trick text-info">
-                                    <i class="fa fa-play" aria-hidden="true"></i>
-                                    La vidéo sera générée ici.
+                                    <video id="v1" controls="controls"
+                                           width="450"
+                                           height="280"
+                                           style="margin-top: -60px;">
+                                        <source src="projet/video.mp4" type="video/mp4" />
+                                        La vidéo sera générée ici.
+                                    </video>
                                 </span>
                             </div>
                         </div>

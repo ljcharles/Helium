@@ -7,14 +7,21 @@
  */
 
 require "Core\Class\ConnectionDB.php";
-$conn = new ConnectionDB();
 
-$monTexte = $_POST["monTexte"];
+class collectData
+{
+    function insertData(){
+        $conn = new ConnectionDB();
 
-$query = "INSERT INTO description(texte) VALUES(?)";
+        $monTexte = $_POST["monTexte"];
 
-$conn = $conn->getInstance();
-$statement = $conn->prepare($query);
-$statement->bindParam(1,$monTexte);
-$statement->execute();
+        $query = "INSERT INTO description(texte) VALUES(?)";
+
+        $conn = $conn->getInstance();
+        $statement = $conn->prepare($query);
+        $statement->bindParam(1,$monTexte);
+        $statement->execute();
+    }
+
+}
 
